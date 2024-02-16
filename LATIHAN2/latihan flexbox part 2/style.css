@@ -1,0 +1,135 @@
+.container {
+  width: 600px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.container div {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(0, 136, 255);
+  margin: 2px;
+}
+
+.container2 {
+  width: 600px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container2 div {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(255, 0, 242);
+  margin: 2px;
+}
+
+.container3 {
+  width: 600px;
+  height: 400px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+}
+
+.container3 div {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(0, 255, 34);
+  margin: 2px;
+}
+
+.container3 div.tiga {
+  font-size: 60px;
+}
+
+.container3 div.empat {
+  font-size: 80px;
+}
+
+.container4 {
+  width: 600px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+}
+
+.container4 div {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(255, 119, 0);
+  margin: 2px;
+}
+
+.container4 div.satu {
+  order: 3;
+}
+
+.container4 div.dua {
+  order: 4;
+}
+
+.container4 div.tiga {
+  order: 2;
+}
+
+.container4 div.empat {
+  order: 1;
+}
+
+.container5 {
+  width: 600px;
+  height: 150px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.container5 div {
+  background-color: rgb(255, 47, 0);
+  margin: 2px;
+  flex: 1;
+}
+
+.container5 div.dua {
+  flex: 2;
+}
+
+.container6 {
+  width: 600px;
+  height: 150px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* align-items: flex-start; */
+}
+
+.container6 div {
+  background-color: rgb(238, 255, 0);
+  margin: 2px;
+  flex: 1;
+}
+
+.container6 div.tiga {
+  flex: 2;
+  align-self: center;
+}

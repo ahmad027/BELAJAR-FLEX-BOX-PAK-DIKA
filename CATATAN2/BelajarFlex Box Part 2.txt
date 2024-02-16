@@ -1,0 +1,162 @@
+# Belajar Flex Box Part 2
+
+PENTING !!!!
+    Gunakan peoperty CSS
+
+    contoh :
+
+    .container {
+        width: 600px;
+        height: 150px;
+        border: 5px solid #333;
+        margin: 30px auto;
+        padding: 5px;
+        box-sizing: border-box; -> ini yang utama, agar size container tidak berubah2 karena setting elemen 
+        display: flex;
+    }
+      
+    agar pembuatan margin dan padding elemen tidak berubah2 lagi dari containernya 
+
+Property pada container 
+        -> display 
+            display, ada 4 (flex,block,inline-block, inline)
+
+            .container {
+                display: flex;
+            }
+
+            membuat sebuah elemen parent menjadi flexbox, dan membuat elemen-elemen di dalamnya bisa berperilaku flex juga 
+
+        -> flex-direction 
+            untuk mengatur arah dari urutan elemen2 di dalamnya,bisa secara horizontal / vertikal / atau kebalikannya
+
+            .container {
+                flex-direction: row | row-reverse | column | column-reverse;
+                row (default) = dari kiri ke kanan
+                row-reverse = dari kanan ke kiri
+                column = dari atas ke bawah
+                column-reverse = dari bawah ke atas 
+            }
+
+        -> flex-wrap 
+            untuk mengatur ketika elemen yang kita punya  tidak muat lagi kedalam container dalam barisnya 
+
+            .container {
+                flex-wrap: nowrap | wrap | wrap-reverse;
+                nowrap (default) = gak ada wrap nya 
+
+            }
+
+            secara default, semua items di dalam container akan berada pada satu baris meskipun ukurannya sudah tidak cukup, wrap memungkinkan untuk memindah items ke baris di bawahnya. 
+
+        NOTE : Untuk mengatur arah elemen bisa memilih salah satu flex-direction / flex-wrap / justify-content (jangan setting dua2nya)
+
+        -> justify-content 
+
+            untuk mengatur rata dari elemen di dalamnya
+
+            ada beberapa property 
+
+            - flex-start = rata kiri (default) 
+            - flex-end = rata kanan 
+            - center = rata tengah
+            - space-between = membuat space yang sama pada elemen 
+            - space-around = membuat space kanan dan kiri elemen menjadi agak sama (space elemen kirinya setengah elemen kanannya)
+            - space-evenly = membuat space kanan dan kiri elemen menjadi agak sama (space kanan dan kiri sama )
+
+            .container {
+                justify-content : flex-start | flex-end | center | space-between | space-evenly;
+
+                flex-start (default)
+            }
+
+            justify-content --> mengatur jarak antar item 
+
+        -> align-items 
+            untuk mengatur kesejajaran antar item secara vertikal 
+
+            (mengatur perilaku penjajaran items terhadap cross axis / vertikal  )
+
+            .container {
+                align-items: flex-start | flex-end | center | stretch | baseline;
+            }
+
+                flex-start = rata ke atas 
+                flex-end = rata kebawah
+                center = rata ketengah
+                stretch = memanjang (kalau height tidak ditentukan akan memanjang memenuhi container )
+                baseline = mengatur rata tengahnya berdasarkan tulisan yang ada didalamnya (bawah tulisan sejajar)
+
+        -> align-content 
+            sama seperti align-items tapi hanya berlaku saat item lebih dari satu baris 
+
+            (mengatur jarak antar itms terhadap cross axis, hanya berfungsi ketika items lebih dari 1 baris )
+
+            .container {
+                align-content: flex-start | flex-end | center | space-between | space-around;
+            }
+
+
+Property pada items 
+
+    -> order = membuat aturan urutan sesuai kemauan, kalau hanya 1 yang disetting (tempatnya 0 + elemen  ) 
+
+        .container4 div.satu {
+            order: 3;
+        }
+
+        .container4 div.dua {
+            order: 4;
+        }
+
+        .container4 div.tiga {
+            order: 2;
+        }
+
+        .container4 div.empat {
+            order: 1;
+        }
+
+
+    -> flex-grow / flex 
+        untuk mengatur ukuran dari item-nya 
+
+        .container5 div {
+            background-color: rgb(255, 47, 0);
+            margin: 2px;
+            flex: 1; -> ukurannya satu 
+        }
+
+            .container5 div.dua {
+            flex: 3; -> ukurannya menjadi 3 kali
+        }
+
+    -> align-self 
+        mengatur perilaku penjajaran sebuah item yang spesifik terhadap cross axis 
+
+        .item {
+            align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        }
+
+        .container6 {
+            width: 600px;
+            height: 150px;
+            border: 5px solid #333;
+            margin: 30px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            /* align-items: flex-start; */
+        }
+
+        .container6 div {
+            background-color: rgb(238, 255, 0);
+            margin: 2px;
+            flex: 1;
+        }
+
+        .container6 div.tiga {
+            flex: 2;
+            align-self: center; -> itemnya berada di tengah sendiri 
+        }
+
