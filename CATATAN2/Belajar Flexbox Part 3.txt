@@ -1,0 +1,37 @@
+# Belajar Flex Box Part 3 
+
+    - line-height -> untuk mengatur jarak tulisan (misal di terapkan pada body )
+
+
+    - emmet membuat ul dan li secara sekaligus 
+
+        ul>(li>a{Link $})*5
+
+        bikinkan saya ul, yang didalamnya, pakai kurung, bikinkan saya serangkaian li, yang di dalamnya ada a, yang di dalamnya ada tulisan link yang keberapa, tutup kurang, dikalikan lima (membuat 5 rangkaian li yang didalamnya ada a href yang tercantum tulisan link ke berapa di tiap li)
+
+    - Apbila container utama di tambah nilai padding, maka ukurannya berubah, agar tidak berubah, kita bisa gunakan 
+    
+    box-sizing: border-box;
+
+    - pada contoh, container utama diberi properti display: flex;
+
+        .container-satu {
+            width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+    - standar penulisan query responsive 
+
+        @media query, saat min-width: 600px maka menggunakan css di bawah 
+
+        @media (min-width: 600px) {
+            .container-dua {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
