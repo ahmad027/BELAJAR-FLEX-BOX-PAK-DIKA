@@ -1,0 +1,58 @@
+# Belajar Flex Box Part 4 
+
+TRICK !  
+
+    -> Untuk ,menengahkan elemen cukup menggunakan display: flex pada parent, dan membuat margin: auto pada child nya 
+
+        <div class="container-lima">
+            <div class="kotak">Hello world Ahmad!</div>
+        </div>
+
+        css-nya :
+
+            .container-lima {
+                max-width: 500px;
+                height: 500px;
+                margin: 50px auto;
+                border: 5px solid black;
+                display: flex; -> menambahkan ini
+            }
+
+            .kotak {
+                width: 100px;
+                height: 100px;
+                background-color: brown;
+                color: #fff;
+                text-align: center;
+                margin: auto; -> setting agar di tengah pas 
+            }
+
+    -> Untuk menengahkan tulisan yang panjang, jangan memakai line-height, gunakan trik di atas juga. menmabhakan display: flex pada parent, dan setting marging: auto pada childnya 
+
+            <div class="container-lima">
+                <div class="kotak"><span>Hello world Ahmad!</span></div>
+            </div>
+
+        css-nya :
+
+            .container-lima {
+                max-width: 500px;
+                height: 500px;
+                margin: 50px auto;
+                border: 5px solid black;
+                display: flex;
+            }
+
+            .kotak {
+                width: 100px;
+                height: 100px;
+                background-color: brown;
+                color: #fff;
+                text-align: center;
+                margin: auto;
+                display: flex;
+            }
+
+            .kotak span {
+                margin: auto;
+            }
